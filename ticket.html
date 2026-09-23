@@ -2,215 +2,223 @@
 <html lang="en" data-astro-cid-snhq6zmy>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Ticket — Unscripted With Raygan</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link href="https://cdn.jsdelivr.net/gh/greyend-studio/uwr-assets@main/fonts.css" rel="stylesheet">
-  <style>
-    [data-astro-cid-snhq6zmy],
-    [data-astro-cid-snhq6zmy]:after,
-    [data-astro-cid-snhq6zmy]:before {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Ticket — Unscripted With Raygan</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://cdn.jsdelivr.net/gh/greyend-studio/uwr-assets@main/fonts.css" rel="stylesheet">
+    <style>
+        [data-astro-cid-snhq6zmy],
+        [data-astro-cid-snhq6zmy]:after,
+        [data-astro-cid-snhq6zmy]:before {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
 
-    body {
-      line-height: 1;
-      display: grid;
-      place-content: center;
-      height: 100vh
-    }
+        body {
+            line-height: 1;
+            display: grid;
+            place-content: center;
+            height: 100vh
+        }
 
-    .ticket[data-astro-cid-snhq6zmy] {
-      font-family: LuxeUno, sans-serif;
-      background-color: #f0edfd;
-      width: 450px;
-      margin: auto;
-      padding-top: 2rem;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      position: relative;
-      corner-shape: squircle;
-      border-radius: 56px
-    }
+        a[data-astro-cid-snhq6zmy] {
+            color: #000;
+            text-decoration: underline;
+            text-underline-offset: 2px
+        }
 
-    .ticket[data-astro-cid-snhq6zmy]:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: .1;
-      z-index: 1;
-      background-image: url(https://cdn.jsdelivr.net/gh/greyend-studio/uwr-assets@main/ticket-bg.webp);
-      background-position: 30% 115%;
-      background-size: 150%;
-      background-repeat: no-repeat;
-      corner-bottom-left-shape: squircle;
-      corner-bottom-right-shape: squircle;
-      border-radius: 56px
-    }
+        .ticket[data-astro-cid-snhq6zmy] {
+            font-family: LuxeUno, sans-serif;
+            background-color: #f0edfd;
+            width: 450px;
+            margin: auto;
+            padding-top: 2rem;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            corner-shape: squircle;
+            border-radius: 56px
+        }
 
-    .ticket-content[data-astro-cid-snhq6zmy] {
-      z-index: 2;
-      position: relative
-    }
+        .ticket[data-astro-cid-snhq6zmy]:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .1;
+            z-index: 1;
+            background-image: url(https://cdn.jsdelivr.net/gh/greyend-studio/uwr-assets@main/ticket-bg.webp);
+            background-position: 30% 115%;
+            background-size: 150%;
+            background-repeat: no-repeat;
+            corner-bottom-left-shape: squircle;
+            corner-bottom-right-shape: squircle;
+            border-radius: 56px
+        }
 
-    .ticket-header[data-astro-cid-snhq6zmy] {
-      padding-inline: 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center
-    }
+        .ticket-content[data-astro-cid-snhq6zmy] {
+            z-index: 2;
+            position: relative
+        }
 
-    .admits[data-astro-cid-snhq6zmy] {
-      background-color: #ad93ff;
-      border-radius: 999px;
-      color: #fff;
-      font-weight: 800;
-      display: grid;
-      place-content: center;
-      padding: 8px 16px 10px;
-      line-height: 100%
-    }
+        .ticket-header[data-astro-cid-snhq6zmy] {
+            padding-inline: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
 
-    .ticket-info[data-astro-cid-snhq6zmy] {
-      padding: 36px 2rem
-    }
+        .admits[data-astro-cid-snhq6zmy] {
+            background-color: #ad93ff;
+            border-radius: 999px;
+            color: #fff;
+            font-weight: 800;
+            display: grid;
+            place-content: center;
+            padding: 8px 16px 10px;
+            line-height: 100%
+        }
 
-    .ticket-qr[data-astro-cid-snhq6zmy] {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-block: 28px
-    }
+        .ticket-info[data-astro-cid-snhq6zmy] {
+            padding: 36px 2rem
+        }
 
-    .ticket-details[data-astro-cid-snhq6zmy] {
-      display: grid;
-      gap: .5rem;
-      padding: 36px 2rem
-    }
+        .ticket-qr[data-astro-cid-snhq6zmy] {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-block: 28px
+        }
 
-    .ticket-logo[data-astro-cid-snhq6zmy] {
-      width: 120px
-    }
+        .ticket-details[data-astro-cid-snhq6zmy] {
+            display: grid;
+            gap: .5rem;
+            padding: 36px 2rem
+        }
 
-    .event-label[data-astro-cid-snhq6zmy] {
-      color: #ad93ff;
-      font-weight: 600
-    }
+        .ticket-logo[data-astro-cid-snhq6zmy] {
+            width: 120px
+        }
 
-    .event-title[data-astro-cid-snhq6zmy] {
-      font-size: 64px;
-      line-height: 100%;
-      font-weight: 900
-    }
+        .event-label[data-astro-cid-snhq6zmy] {
+            color: #ad93ff;
+            font-weight: 600
+        }
 
-    .event-meta[data-astro-cid-snhq6zmy] {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 2rem
-    }
+        .event-title[data-astro-cid-snhq6zmy] {
+            font-size: 64px;
+            line-height: 100%;
+            font-weight: 900
+        }
 
-    .meta-label[data-astro-cid-snhq6zmy],
-    .detail-label[data-astro-cid-snhq6zmy] {
-      color: #00000080;
-      font-size: 16px;
-      line-height: 130%
-    }
+        .event-meta[data-astro-cid-snhq6zmy] {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem
+        }
 
-    .meta-value[data-astro-cid-snhq6zmy],
-    .detail-value[data-astro-cid-snhq6zmy] {
-      font-weight: 600;
-      font-size: 1.125rem
-    }
+        .meta-label[data-astro-cid-snhq6zmy],
+        .detail-label[data-astro-cid-snhq6zmy] {
+            color: #00000080;
+            font-size: 16px;
+            line-height: 130%
+        }
 
-    .qr-image[data-astro-cid-snhq6zmy] {
-      height: 200px;
-      width: 200px
-    }
+        .meta-value[data-astro-cid-snhq6zmy],
+        .detail-value[data-astro-cid-snhq6zmy] {
+            font-weight: 600;
+            font-size: 1.125rem
+        }
 
-    .qr-note[data-astro-cid-snhq6zmy] {
-      color: #bd0000;
-      text-align: center;
-      text-wrap: balance;
-      line-height: 100%;
-      font-weight: 600;
-      margin-top: .5rem;
-      width: 30ch
-    }
+        .qr-image[data-astro-cid-snhq6zmy] {
+            height: 200px;
+            width: 200px
+        }
 
-    .detail-row[data-astro-cid-snhq6zmy] {
-      display: grid;
-      grid-template-columns: .5fr 1fr
-    }
+        .qr-note[data-astro-cid-snhq6zmy] {
+            color: #bd0000;
+            text-align: center;
+            text-wrap: balance;
+            line-height: 100%;
+            font-weight: 600;
+            margin-top: .5rem;
+            width: 30ch
+        }
 
-    .status-confirmed[data-astro-cid-snhq6zmy] {
-      color: #05a20a
-    }
+        .detail-row[data-astro-cid-snhq6zmy] {
+            display: grid;
+            grid-template-columns: .5fr 1fr
+        }
 
-    .custom-dash[data-astro-cid-snhq6zmy] {
-      height: 1px;
-      background-image: linear-gradient(to right, #333 66%, #fff0 0%);
-      background-position: top;
-      background-size: 15px 1px;
-      background-repeat: repeat-x
-    }
-  </style>
+        .status-confirmed[data-astro-cid-snhq6zmy] {
+            color: #05a20a
+        }
+
+        .custom-dash[data-astro-cid-snhq6zmy] {
+            height: 1px;
+            background-image: linear-gradient(to right, #333 66%, #fff0 0%);
+            background-position: top;
+            background-size: 15px 1px;
+            background-repeat: repeat-x
+        }
+    </style>
 </head>
 
 <body data-astro-cid-snhq6zmy>
-  <main class="ticket" data-astro-cid-snhq6zmy>
-    <div class="ticket-content" data-astro-cid-snhq6zmy>
-      <div class="ticket-header" data-astro-cid-snhq6zmy> <img
-          src="https://cdn.jsdelivr.net/gh/greyend-studio/uwr-assets@main/logo.png" alt="" class="ticket-logo"
-          data-astro-cid-snhq6zmy>
-        <div class="admits" data-astro-cid-snhq6zmy>Admits {{admitCount}}</div>
-      </div>
-      <div class="ticket-info" data-astro-cid-snhq6zmy>
-        <p class="event-label" data-astro-cid-snhq6zmy>The Roundtable Premiere</p>
-        <h1 class="event-title" data-astro-cid-snhq6zmy>THE FUTURE OF GHANA</h1> <span class="event-meta"
-          data-astro-cid-snhq6zmy>
-          <div data-astro-cid-snhq6zmy>
-            <p class="meta-label" data-astro-cid-snhq6zmy>DATE</p>
-            <h6 class="meta-value" data-astro-cid-snhq6zmy>17th Oct. 2026</h6>
-          </div>
-          <div data-astro-cid-snhq6zmy>
-            <p class="meta-label" data-astro-cid-snhq6zmy>TIME</p>
-            <h6 class="meta-value" data-astro-cid-snhq6zmy>1:00PM</h6>
-          </div>
-          <div data-astro-cid-snhq6zmy>
-            <p class="meta-label" data-astro-cid-snhq6zmy>LOCATION</p>
-            <h6 class="meta-value" data-astro-cid-snhq6zmy>TBD</h6>
-          </div>
-        </span>
-      </div>
-      <div class="custom-dash" data-astro-cid-snhq6zmy></div>
-      <div class="ticket-qr" data-astro-cid-snhq6zmy> <img src="{{qrCodeDataUrl}}" alt="QR Code" class="qr-image"
-          data-astro-cid-snhq6zmy>
-        <p class="qr-note" data-astro-cid-snhq6zmy>
-          This QR Code will be scanned at the entranced for Admission
-        </p>
-      </div>
-      <div class="custom-dash" data-astro-cid-snhq6zmy></div>
-      <div class="ticket-details" data-astro-cid-snhq6zmy> <span class="detail-row" data-astro-cid-snhq6zmy>
-          <p class="detail-label" data-astro-cid-snhq6zmy>GUEST NAME</p>
-          <h6 class="detail-value" data-astro-cid-snhq6zmy>{{guestName}}</h6>
-        </span> <span class="detail-row" data-astro-cid-snhq6zmy>
-          <p class="detail-label" data-astro-cid-snhq6zmy>TICKET TYPE</p>
-          <h6 class="detail-value" data-astro-cid-snhq6zmy>{{ticketType}}</h6>
-        </span> <span class="detail-row" data-astro-cid-snhq6zmy>
-          <p class="detail-label" data-astro-cid-snhq6zmy>TICKET ID</p>
-          <h6 class="detail-value" data-astro-cid-snhq6zmy>{{ticketId}}</h6>
-        </span> <span class="detail-row" data-astro-cid-snhq6zmy>
-          <p class="detail-label" data-astro-cid-snhq6zmy>STATUS</p>
-          <h6 class="detail-value status-confirmed" data-astro-cid-snhq6zmy>Confirmed</h6>
-        </span> </div>
-    </div>
-  </main>
+    <main class="ticket" data-astro-cid-snhq6zmy>
+        <div class="ticket-content" data-astro-cid-snhq6zmy>
+            <div class="ticket-header" data-astro-cid-snhq6zmy> <img
+                    src="https://cdn.jsdelivr.net/gh/greyend-studio/uwr-assets@main/logo.png" alt="" class="ticket-logo"
+                    data-astro-cid-snhq6zmy>
+                <div class="admits" data-astro-cid-snhq6zmy>Admits {{admitCount}}</div>
+            </div>
+            <div class="ticket-info" data-astro-cid-snhq6zmy>
+                <p class="event-label" data-astro-cid-snhq6zmy>The Roundtable Premiere</p>
+                <h1 class="event-title" data-astro-cid-snhq6zmy>THE FUTURE OF GHANA</h1> <span class="event-meta"
+                    data-astro-cid-snhq6zmy>
+                    <div data-astro-cid-snhq6zmy>
+                        <p class="meta-label" data-astro-cid-snhq6zmy>DATE</p>
+                        <h6 class="meta-value" data-astro-cid-snhq6zmy>17th Oct. 2026</h6>
+                    </div>
+                    <div data-astro-cid-snhq6zmy>
+                        <p class="meta-label" data-astro-cid-snhq6zmy>TIME</p>
+                        <h6 class="meta-value" data-astro-cid-snhq6zmy>1:00PM</h6>
+                    </div>
+                    <div data-astro-cid-snhq6zmy>
+                        <p class="meta-label" data-astro-cid-snhq6zmy>LOCATION</p>
+                        <h6 class="meta-value" data-astro-cid-snhq6zmy> <a
+                                href="https://maps.app.goo.gl/MzMRGBcPjT4ju5BY8?g_st=ic" data-astro-cid-snhq6zmy>UGEL
+                                Domes</a> </h6>
+                    </div>
+                </span>
+            </div>
+            <div class="custom-dash" data-astro-cid-snhq6zmy></div>
+            <div class="ticket-qr" data-astro-cid-snhq6zmy> <img src="{{qrCodeDataUrl}}" alt="QR Code" class="qr-image"
+                    data-astro-cid-snhq6zmy>
+                <p class="qr-note" data-astro-cid-snhq6zmy>
+                    This QR Code will be scanned at the entranced for Admission
+                </p>
+            </div>
+            <div class="custom-dash" data-astro-cid-snhq6zmy></div>
+            <div class="ticket-details" data-astro-cid-snhq6zmy> <span class="detail-row" data-astro-cid-snhq6zmy>
+                    <p class="detail-label" data-astro-cid-snhq6zmy>GUEST NAME</p>
+                    <h6 class="detail-value" data-astro-cid-snhq6zmy>{{guestName}}</h6>
+                </span> <span class="detail-row" data-astro-cid-snhq6zmy>
+                    <p class="detail-label" data-astro-cid-snhq6zmy>TICKET TYPE</p>
+                    <h6 class="detail-value" data-astro-cid-snhq6zmy>{{ticketType}}</h6>
+                </span> <span class="detail-row" data-astro-cid-snhq6zmy>
+                    <p class="detail-label" data-astro-cid-snhq6zmy>TICKET ID</p>
+                    <h6 class="detail-value" data-astro-cid-snhq6zmy>{{ticketId}}</h6>
+                </span> <span class="detail-row" data-astro-cid-snhq6zmy>
+                    <p class="detail-label" data-astro-cid-snhq6zmy>STATUS</p>
+                    <h6 class="detail-value status-confirmed" data-astro-cid-snhq6zmy>Confirmed</h6>
+                </span> </div>
+        </div>
+    </main>
 </body>
 
 </html>
